@@ -16,7 +16,7 @@ const About = () => {
         <div>
           <h2 className="text-2xl font-medium text-gray-900 mb-4">Our Story</h2>
           <p className="text-gray-600 mb-4">
-            Founded in 2010, ETHEREAL SCENT was born from a passion for fine
+            Founded in 2025, ETHEREAL SCENT was born from a passion for fine
             fragrances and a desire to create scents that evoke emotion and
             capture memories. Our founder, Sophie Laurent, a third-generation
             perfumer, began creating unique compositions in her small Parisian

@@ -67,10 +67,10 @@ const Footer = () => {
               Contact
             </h3>
             <ul className="text-gray-400 space-y-2">
-              <li>123 Fragrance Lane</li>
-              <li>Paris, France</li>
-              <li>info@essence.com</li>
-              <li>+33 1 23 45 67 89</li>
+              <li>8 Rabiatu Thompson</li>
+              <li>Surulere, Lagos</li>
+              <li>Firdausbalogun@gmail.com</li>
+              <li>+234 70 87 96 47 46</li>
             </ul>
           </div>
         </div>

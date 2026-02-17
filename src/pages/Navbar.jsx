@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaTimes } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-router";
+// import Signup from "./Singup";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
@@ -47,7 +48,18 @@ const Navbar = () => {
             >
               Contact
             </Link>
+            <Link to="/signup">
+              <button className="text-white bg-gray-500 pt-[10px] pb-[10px] px-[16px] rounded-[10px]">
+                Signup
+              </button>
+            </Link>
+            <Link to="/login">
+              <button className="text-white bg-gray-500 pt-[10px] pb-[10px] px-[16px] rounded-[10px]">
+                Login
+              </button>
+            </Link>
           </div>
+
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -100,12 +112,23 @@ const Navbar = () => {
             >
               FAQ
             </Link>
-            <Link
+            {/* <Link
               to="/faq"
               className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50"
               onClick={() => setIsMenuOpen(false)}
             >
               FAQ
+            </Link> */}
+            <Link to="/signup" onClick={() => setIsMenuOpen(false)}>
+              <button className="text-white bg-gray-500 pt-[10px] pb-[10px] px-[16px] rounded-[10px] block mb-[10px]">
+                Signup
+              </button>
+            </Link>
+            {/* <br /> */}
+            <Link to="/login" onClick={() => setIsMenuOpen(false)}>
+              <button className="text-white bg-gray-500 pt-[10px] pb-[10px] px-[16px] rounded-[10px]">
+                Login
+              </button>
             </Link>
           </div>
         </div>
