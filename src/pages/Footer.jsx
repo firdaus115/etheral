@@ -1,7 +1,8 @@
 import React from "react";
 import { BsInstagram, BsTwitter } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">
