@@ -180,7 +180,181 @@ const Contact = () => {
     setPaymentAmountValid(null);
   };
 
-  return <div>Your existing JSX stays exactly the same here.</div>;
+return (
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="text-center mb-12">
+      <h1 className="text-3xl font-serif tracking-wide text-gray-900">
+        Contact Us
+      </h1>
+      <p className="mt-4 max-w-2xl mx-auto text-gray-500">
+        Have questions or ready to place an order? Reach out to us and we'll get
+        back to you shortly.
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div>
+        <h2 className="text-xl font-medium text-gray-900 mb-6">
+          Send us a message
+        </h2>
+
+        {isSubmitted ? (
+          <div className="bg-green-50 border border-green-200 rounded-md p-6 text-center">
+            <h3 className="text-lg font-medium text-green-800 mb-2">
+              Thank you!
+            </h3>
+            <p className="text-green-700">
+              Your message has been sent successfully.
+            </p>
+          </div>
+        ) : (
+          <form onSubmit={handleSubmit} className="space-y-6">
+            {/* NAME */}
+            <div>
+              <label
+                htmlFor="name"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
+              />
+            </div>
+
+            {/* EMAIL */}
+            <div>
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
+              />
+            </div>
+
+            {/* PHONE */}
+            <div>
+              <label
+                htmlFor="phone"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
+                Phone
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
+              />
+            </div>
+
+            {/* ADDRESS */}
+            <div>
+              <label
+                htmlFor="address"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
+                Address
+              </label>
+              <input
+                type="text"
+                id="address"
+                name="address"
+                value={formData.address}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
+              />
+            </div>
+
+            {/* MESSAGE */}
+            <div>
+              <label
+                htmlFor="message"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                rows={4}
+                required
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
+              />
+            </div>
+
+            {/* SUBMIT */}
+            <button
+              type="submit"
+              disabled={
+                selectedPerfumes.length === 0 ||
+                !bankTransferAcknowledged ||
+                (selectedPerfumes.length > 0 && paymentAmountValid === false)
+              }
+              className={`w-full px-6 py-3 rounded-md font-medium transition-colors ${
+                selectedPerfumes.length === 0 ||
+                !bankTransferAcknowledged ||
+                (selectedPerfumes.length > 0 && paymentAmountValid === false)
+                  ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                  : "bg-gray-900 text-white hover:bg-gray-800"
+              }`}
+            >
+              Send Message
+            </button>
+          </form>
+        )}
+      </div>
+
+      {/* RIGHT SIDE INFO */}
+      <div>
+        <h2 className="text-xl font-medium text-gray-900 mb-6">
+          Contact Information
+        </h2>
+
+        <div className="space-y-8">
+          <div>
+            <h3 className="text-sm font-medium text-gray-900">Email</h3>
+            <p className="mt-1 text-gray-600">info@essence.com</p>
+            <p className="mt-1 text-gray-600">orders@essence.com</p>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-medium text-gray-900">Phone</h3>
+            <p className="mt-1 text-gray-600">+33 1 23 45 67 89</p>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-medium text-gray-900">Address</h3>
+            <p className="mt-1 text-gray-600">123 Fragrance Lane</p>
+            <p className="mt-1 text-gray-600">Paris, France</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
 };
 
 export default Contact;

@@ -16,18 +16,37 @@ const Footer = () => {
               Discover our exquisite collection of luxury fragrances, crafted
               with the finest ingredients from around the world.
             </p>
+
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white"
+              >
                 <BsInstagram size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white"
+              >
                 <FaFacebook size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white"
+              >
                 <BsTwitter size={20} />
               </a>
             </div>
           </div>
+
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider mb-4">
               Quick Links
@@ -63,6 +82,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider mb-4">
               Contact
@@ -75,6 +95,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
+
         <div className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
           <p>
             &copy; {new Date().getFullYear()} ETHEREAL SCENT. All rights
